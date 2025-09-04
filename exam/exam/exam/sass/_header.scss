@@ -1,0 +1,205 @@
+// Global styles
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+// BACK TO TOP
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #02897a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: none;
+  font-size: 16px;
+
+  &:hover {
+    background-color: #02897a;
+  }
+}
+
+// HEADER & NAVIGATION
+header {
+  backdrop-filter: blur(20px);
+  background: transparent;
+  padding-top: 45px;
+  padding-bottom: 33px;
+  position: fixed;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    h1 {
+      font-family: Poppins;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 28px;
+      color: #173a56;
+      margin-right: 0; // default
+    }
+  }
+
+  &-list {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+
+  &-link {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: #22343d;
+
+    span {
+      font-weight: 600;
+    }
+
+    &:hover {
+      transition: all 0.5s;
+      text-decoration: underline;
+    }
+  }
+}
+
+// CONTACT BUTTON
+.contact-btn {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  color: black;
+  background: white;
+  padding: 10px 22px 9px 25px;
+  border: 1px solid #bcd0e5;
+  border-radius: 4px;
+
+  &:hover {
+    background: #02897a;
+    color: white;
+  }
+}
+
+// MOBILE MENU
+.menu-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+
+  img {
+    width: 50px;
+  }
+}
+
+#nav-open {
+  display: none;
+  background-color: #1a4d5d;
+}
+
+#navbar-responsive {
+  backdrop-filter: blur(11px);
+  position: fixed;
+  top: 0;
+  left: -100%;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: 0.5s;
+}
+
+#navbar-close {
+  position: absolute;
+  top: 50px;
+  right: 25px;
+  background-color: #1a4d5d;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-link {
+  color: white;
+  margin-bottom: 20px;
+  display: block;
+  width: 80px;
+  height: 30px;
+  text-align: center;
+  background-color: #02897a;
+  padding-top: 5px;
+  border-radius: 12px;
+}
+
+// MODE TOGGLER
+#mode-btn {
+  background: #f3f3f3;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+// DARK MODE
+.dark {
+  background-color: black;
+
+  * {
+    color: lime !important;
+  }
+}
+
+// RESPONSIVE
+@media (max-width: 920px) {
+  .contact-btn {
+    display: none;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .menu-btn {
+    display: inline-block !important;
+  }
+
+  .nav {
+    align-items: center;
+
+    &-logo {
+      h1 {
+        margin-right: 100px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}

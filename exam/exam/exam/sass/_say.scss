@@ -1,0 +1,141 @@
+.say-sec {
+  h2 {
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 57px;
+    letter-spacing: 0.2px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+.say {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 64px;
+  padding-left: 40px;
+  padding-bottom: 157px;
+
+  .say-box {
+    width: 327px;
+    height: 236px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    padding-top: 28px;
+    padding-left: 26px;
+
+    p {
+      font-family: Poppins;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: 0.2px;
+      color: #737373;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      width: 275px;
+    }
+  }
+}
+
+.companies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .companies-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    border-radius: 32px;
+    background-color: #02897a;
+    padding-left: 51px;
+    padding-right: 20px;
+
+    .companies-left {
+      h3 {
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 151%;
+        color: white;
+      }
+
+      button {
+        padding: 10px 34px 10px 34px;
+        color: #02897a;
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 100%;
+        border-radius: 8px;
+        margin-top: 90px;
+        border: none;
+      }
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: 1210px) {
+  .say {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding-left: 20px;
+    padding-bottom: 100px;
+  }
+
+  .say-box {
+    width: 100%;
+    height: auto;
+  }
+
+  .companies-left {
+    text-align: center;
+
+    h3 {
+      width: 100%;
+      font-size: 24px;
+    }
+
+    button {
+      margin-top: 20px;
+    }
+  }
+}
+@media (max-width: 1035px) {
+  .companies-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (max-width: 725px) {
+  .say {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-left: 20px;
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 560px) {
+  .companies-left h3 {
+    width: 200px;
+  }
+}
+@media (max-width: 440px) {
+  .companies-box img {
+    width: 100%;
+  }
+}
